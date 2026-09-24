@@ -226,14 +226,14 @@
   function jsonLines() {
     const str = (v) => `<span class="t-str">"${escape(v)}"</span>`;
     const key = (k) => `  <span class="t-key">"${k}"</span>: `;
-    const stack = data.skills.flatMap((g) => g.items).slice(0, 5);
+    const tools = data.tools || data.skills.flatMap((g) => g.items).slice(0, 5);
 
     return [
       "{",
       key("name") + str(data.name) + ",",
       key("role") + str(data.role) + ",",
       key("location") + str(data.location) + ",",
-      key("stack") + "[" + stack.map(str).join(", ") + "],",
+      key("tools") + "[" + tools.map(str).join(", ") + "],",
       key("open_to_work") + `<span class="t-num">${Boolean(data.status)}</span>`,
       "}",
     ].join("\n");
