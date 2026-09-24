@@ -38,7 +38,7 @@
     });
 
     $('[data-bind="logo"]').innerHTML = `<span>~/</span>${escape(data.handle)}`;
-    document.title = `${data.name} — ${data.role}`;
+    document.title = `${data.name}. ${data.role}`;
     $("#year").textContent = new Date().getFullYear();
 
     if (!data.status) $(".status").remove();
