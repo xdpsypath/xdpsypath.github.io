@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Нонна Роза: семейная траттория, паста и пицца из дровяной печи</title>
+  <meta name="description" content="Семейная итальянская траттория в Москве на Чистых прудах. Домашняя паста каждое утро, пицца из дровяной печи, бронь стола онлайн.">
+  <meta name="theme-color" content="#f6eee2" media="(prefers-color-scheme: light)"> <!-- ds-allow-hardcode: цвет панели браузера -->
+  <meta name="theme-color" content="#1c1511" media="(prefers-color-scheme: dark)"> <!-- ds-allow-hardcode: цвет панели браузера -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Golos+Text:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <script src="js/icons.js"></script>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html">
+        <span class="logo__name">Нонна Роза</span>
+        <span class="logo__sub">траттория с 1978</span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html" aria-current="page">Главная</a></li>
+          <li><a class="nav__link" href="menu.html">Меню</a></li>
+          <li><a class="nav__link" href="booking.html">Бронь</a></li>
+          <li><a class="nav__link" href="about.html">О нас и контакты</a></li>
+        </ul>
+      </nav>
+      <p class="status header-status" data-status><span class="status__dot" aria-hidden="true"></span><span><span class="status__word">Ежедневно</span> <span class="status__rest">с 12:00</span></span></p>
+      <a class="btn btn--primary header-cta" href="booking.html">Забронировать стол</a>
+      <button class="burger" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Навигация по сайту">
+        <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"></use></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#i-x"></use></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Навигация на телефоне" hidden>
+      <div class="container">
+        <ul class="mobile-nav__list">
+          <li><a class="mobile-nav__link" href="index.html" aria-current="page">Главная</a></li>
+          <li><a class="mobile-nav__link" href="menu.html">Меню</a></li>
+          <li><a class="mobile-nav__link" href="booking.html">Бронь стола</a></li>
+          <li><a class="mobile-nav__link" href="about.html">О нас и контакты</a></li>
+        </ul>
+        <div class="mobile-nav__foot">
+          <p class="status" data-status><span class="status__dot" aria-hidden="true"></span><span><span class="status__word">Ежедневно</span> <span class="status__rest">с 12:00</span></span></p>
+          <a class="btn btn--primary btn--lg" href="booking.html">Забронировать стол</a>
+          <a class="btn btn--secondary btn--lg" href="tel:+74955550178"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>+7 (495) 555-01-78</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Первый экран -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow">Семейная траттория на Чистых прудах</p>
+          <h1 class="display" id="hero-title">Садитесь <em>поближе</em> к печи</h1>
+          <p class="hero__lead">Пасту раскатываем каждое утро по рецептам бабушки Розы из Римини. Пицца проводит полторы минуты в дровяной печи, а вино мы возим из маленьких хозяйств.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="booking.html">Забронировать стол <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+            <a class="btn btn--secondary btn--lg" href="menu.html">Открыть меню</a>
+          </div>
+          <p class="status hero__status" data-status><span class="status__dot" aria-hidden="true"></span><span><span class="status__word">Ежедневно</span> <span class="status__rest">с 12:00</span></span></p>
+        </div>
+        <figure class="hero__figure">
+          <img class="hero__img photo" src="img/hero-pasta.webp" width="1024" height="683" alt="Руки повара пропускают раскатанное тесто через машинку для пасты, из неё выходят тонкие тальятелле" fetchpriority="high">
+          <p class="hero__stamp"><strong>с 1978 года</strong>Рецепты из Римини, три поколения одной семьи</p>
+          <figcaption class="caption">Девять утра. Тальятелле к обеду раскатывают прямо в зале.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- История семьи -->
+    <section class="section story" aria-labelledby="story-title">
+      <div class="container story__grid">
+        <div>
+          <p class="eyebrow">История семьи</p>
+          <h2 class="section-title" id="story-title">Три поколения <em>у одной</em> плиты</h2>
+        </div>
+        <div class="story__body prose">
+          <p class="dropcap">В 1978 году Роза Бьянки открыла в Римини закусочную на шесть столов. Меню писали мелом, пасту раскатывали на подоконнике, а соседи приходили со своими тарелками.</p>
+          <p>В 2009 году её внук Марко переехал в Москву и привёз тетрадь с рецептами. Мы готовим по ней до сих пор: рагу томится шесть часов, тесто для пиццы зреет двое суток, а тирамису собирают утром, чтобы к вечеру он успел настояться.</p>
+          <a class="story__link" href="about.html">Вся история семьи <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+        </div>
+        <blockquote class="story__quote">
+          <p>«Паста не любит спешки. Если торопитесь, закажите пиццу: она готова за полторы минуты».</p>
+          <footer>Роза Бьянки, основательница</footer>
+        </blockquote>
+        <figure class="story__figure">
+          <img class="photo" src="img/kneading.webp" width="1024" height="683" alt="Руки в муке месят тесто на деревянном столе" loading="lazy">
+          <figcaption class="caption">Тесто для пиццы месят вручную и оставляют на 48 часов.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Фирменные блюда -->
+    <section class="section signatures" aria-labelledby="sig-title">
+      <div class="container">
+        <div class="signatures__head">
+          <div>
+            <p class="eyebrow">Фирменное</p>
+            <h2 class="section-title" id="sig-title">Что заказывают <em>чаще всего</em></h2>
+          </div>
+          <a class="btn btn--secondary" href="menu.html">Всё меню <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+        </div>
+        <ul class="signatures__grid" id="signatures"></ul>
+        <noscript><p class="lead">Фирменные блюда: тальятелле с рагу, пицца «Диавола», ньокки с прошутто. Полное меню на странице <a href="menu.html">«Меню»</a>.</p></noscript>
+      </div>
+    </section>
+
+    <!-- Сегодня в печи -->
+    <section class="section band" aria-labelledby="oven-title">
+      <div class="container oven__grid">
+        <figure class="oven__figure">
+          <img class="photo" src="img/oven.webp" width="1024" height="683" alt="Две пиццы на поду дровяной печи, в глубине горят поленья" loading="lazy">
+        </figure>
+        <div>
+          <p class="eyebrow"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-flame"></use></svg>Сегодня в печи</p>
+          <p class="oven__day" id="oven-day">Блюдо дня меняется каждый день</p>
+          <h2 class="oven__name" id="oven-title">Блюдо из дровяной печи</h2>
+          <p class="oven__desc" id="oven-desc">Каждый день недели пиццайоло Марко готовит в печи что-то одно, чего нет в основном меню.</p>
+          <p class="oven__price" id="oven-price"></p>
+          <ul class="week" id="oven-week" aria-label="Блюда из печи по дням недели"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="section reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <p class="eyebrow">Отзывы гостей</p>
+        <h2 class="section-title" id="reviews-title">Что говорят <em>за столом</em></h2>
+        <div class="reviews__grid">
+          <figure class="review review--lead">
+            <svg class="icon icon--xl" aria-hidden="true"><use href="#i-quote"></use></svg>
+            <blockquote><p>Пришли на годовщину, сели у печи и смотрели, как работает пиццайоло. Тальятелле как в Болонье, а тирамису мы заказали второй раз.</p></blockquote>
+            <figcaption><b>Ирина и Сергей</b>, годовщина, октябрь</figcaption>
+            <p class="rating"><b>4,9</b> средняя оценка гостей за 2025 год, 1 240 отзывов</p>
+          </figure>
+          <div class="reviews__side">
+            <figure class="review">
+              <blockquote><p>Нас было десять человек. Менеджер сам предложил сдвинуть столы в дальнем зале и собрал сет, никто не ушёл голодным.</p></blockquote>
+              <figcaption><b>Дмитрий</b>, день рождения</figcaption>
+            </figure>
+            <figure class="review">
+              <blockquote><p>Тихо, тепло, официанты не торопят. Карбонара без сливок, всё честно.</p></blockquote>
+              <figcaption><b>Мария</b>, ужин вдвоём</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Часы работы и бронь -->
+    <section class="section visit" aria-labelledby="visit-title">
+      <div class="container visit__grid">
+        <div>
+          <p class="eyebrow">Часы работы</p>
+          <h2 class="section-title" id="visit-title">Ждём <em>каждый</em> вечер</h2>
+          <ul class="hours" data-hours aria-label="Часы работы по дням недели">
+            <li><span class="hours__day">Понедельник<span class="hours__note">до 16:00 санитарный день</span></span><span class="hours__time">16:00 - 23:00</span></li>
+            <li><span class="hours__day">Вторник - воскресенье</span><span class="hours__time">12:00 - 23:00</span></li>
+          </ul>
+        </div>
+        <div class="status-card">
+          <p class="status" data-status><span class="status__dot" aria-hidden="true"></span><span><span class="status__word">Ежедневно</span> <span class="status__rest">с 12:00</span></span></p>
+          <p class="status-card__big">Стол на вечер пятницы лучше бронировать за день</p>
+          <p class="muted">После 19:00 в выходные зал заполнен. Бронь держим 15 минут, если опаздываете, позвоните.</p>
+          <a class="btn btn--primary btn--lg btn--block" href="booking.html">Забронировать стол</a>
+          <a class="status-card__phone" href="tel:+74955550178"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>+7 (495) 555-01-78</a>
+          <p class="muted">Кривоколенный пер., 9, стр. 2. От метро «Чистые пруды» 6 минут пешком.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">Нонна Роза</p>
+          <p class="muted prose">Семейная траттория. Паста, пицца из дровяной печи и вино из маленьких хозяйств Италии.</p>
+        </div>
+        <div class="footer__col">
+          <h2>Страницы</h2>
+          <ul class="footer__list">
+            <li><a href="menu.html">Меню</a></li>
+            <li><a href="booking.html">Бронь стола</a></li>
+            <li><a href="about.html">О нас и контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h2>Адрес</h2>
+          <p>Кривоколенный пер., 9, стр. 2</p>
+          <p class="muted">м. Чистые пруды, Тургеневская</p>
+        </div>
+        <div class="footer__col">
+          <h2>Связь</h2>
+          <ul class="footer__list">
+            <li><a href="tel:+74955550178"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-phone"></use></svg>+7 (495) 555-01-78</a></li>
+            <li><a href="mailto:stol@nonna-rosa.example"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-mail"></use></svg>stol@nonna-rosa.example</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>Концепт для портфолио. Компания, цены и данные вымышлены, фото с лицензией CC0.</p>
+        <p>© <span data-year>2026</span> Траттория «Нонна Роза»</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

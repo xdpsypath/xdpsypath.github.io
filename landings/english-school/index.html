@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Talkative. Онлайн-школа разговорного английского</title>
+  <meta name="description" content="Разговорный английский в мини-группах до 4 человек. 80% урока говорите вы. Бесплатный пробный урок и тест уровня за 2 минуты." />
+  <meta name="theme-color" content="#5b3fd6" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%235b3fd6'/%3E%3Cpath d='M9 10h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-7l-5 4v-4H9a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2z' fill='%23ffc93c'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" />
+  <link rel="preload" as="image" href="img/friends.jpg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <svg width="0" height="0" class="sprite" aria-hidden="true">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.38 3.62a1 1 0 0 1 3 3L7.37 18.64a2 2 0 0 1-.85.5l-2.87.84a.5.5 0 0 1-.62-.62l.84-2.87a2 2 0 0 1 .5-.85z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M11.53 2.3a.53.53 0 0 1 .95 0l2.31 4.68a2.12 2.12 0 0 0 1.6 1.16l5.16.76a.53.53 0 0 1 .3.9l-3.74 3.64a2.12 2.12 0 0 0-.61 1.88l.88 5.14a.53.53 0 0 1-.77.56l-4.62-2.43a2.12 2.12 0 0 0-1.97 0L6.4 21.01a.53.53 0 0 1-.77-.56l.88-5.13a2.12 2.12 0 0 0-.61-1.88L2.16 9.8a.53.53 0 0 1 .3-.9l5.16-.76a2.12 2.12 0 0 0 1.6-1.16z"/></symbol>
+    <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></symbol>
+    <symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="logo" href="#top" aria-label="Talkative, на главную">
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9"/><path d="M9 10h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-7l-5 4v-4H9a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2z"/></svg>
+        <span>talkative</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Разделы">
+        <a href="#method">Как учим</a>
+        <a href="#test">Тест уровня</a>
+        <a href="#formats">Форматы</a>
+        <a href="#prices">Цены</a>
+        <a href="#reviews">Отзывы</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--primary btn--sm header__cta" href="#trial">Пробный урок</a>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-controls="nav" aria-expanded="false" aria-label="Открыть меню">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Первый экран -->
+    <section class="hero" id="top">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="chip">Онлайн-школа разговорного английского</p>
+          <h1 class="hero__title">Английский, на котором вы <mark>заговорите</mark></h1>
+          <p class="hero__lead">80% урока говорите вы, а не преподаватель. Группы до 4 человек, живые темы и разговорный клуб каждую пятницу.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#trial">Записаться на пробный урок</a>
+            <a class="btn btn--secondary" href="#test">Узнать свой уровень</a>
+          </div>
+          <p class="hero__proof">
+            <span class="stars" aria-hidden="true">
+              <svg class="icon icon--sm"><use href="#i-star"/></svg><svg class="icon icon--sm"><use href="#i-star"/></svg><svg class="icon icon--sm"><use href="#i-star"/></svg><svg class="icon icon--sm"><use href="#i-star"/></svg><svg class="icon icon--sm"><use href="#i-star"/></svg>
+            </span>
+            <span><strong>4,9 из 5</strong> по 1 240 отзывам выпускников</span>
+          </p>
+        </div>
+
+        <div class="hero__media">
+          <img src="img/friends.jpg" width="960" height="640" alt="Четверо друзей смеются во время разговора на закате" fetchpriority="high" />
+          <div class="bubble bubble--in" aria-hidden="true">
+            <span class="avatar avatar--teacher">EM</span>
+            <p>So, what did you do this weekend?</p>
+          </div>
+          <div class="bubble bubble--out" aria-hidden="true">
+            <p>I went hiking with friends. It was amazing!</p>
+          </div>
+          <p class="hero__lesson" aria-hidden="true">Урок 12 · Small talk</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Бегущая строка тем -->
+    <section class="marquee" aria-label="Темы уроков">
+      <ul class="visually-hidden">
+        <li>Small talk</li><li>Собеседование</li><li>Путешествия</li><li>Презентации</li><li>Деловые письма</li><li>Фильмы и сериалы</li><li>Переговоры</li><li>IT и продукт</li>
+      </ul>
+      <div class="marquee__track" aria-hidden="true">
+        <div class="marquee__group">
+          <span>Small talk</span><span>Job interview</span><span>Travel</span><span>Presentations</span><span>Emails</span><span>Movies &amp; series</span><span>Negotiations</span><span>Tech talk</span>
+        </div>
+        <div class="marquee__group">
+          <span>Small talk</span><span>Job interview</span><span>Travel</span><span>Presentations</span><span>Emails</span><span>Movies &amp; series</span><span>Negotiations</span><span>Tech talk</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Метод -->
+    <section class="section" id="method" aria-labelledby="method-title">
+      <div class="container method">
+        <div class="method__stat">
+          <p class="method__num">80%</p>
+          <h2 class="method__title" id="method-title">времени урока говорите вы</h2>
+          <p class="method__lead">На обычных курсах студент говорит 5-7 минут за урок. У нас около 45 минут из 60: остальное время преподаватель задаёт вопросы и слушает.</p>
+        </div>
+
+        <figure class="method__media">
+          <img src="img/talking-street.jpg" width="960" height="640" alt="Трое мужчин оживлённо разговаривают на улице" loading="lazy" />
+        </figure>
+
+        <ul class="method__points">
+          <li>
+            <span class="method__icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <div>
+              <h3>До 4 человек в группе</h3>
+              <p>Подбираем группу по уровню и целям, чтобы никто не молчал и не тянул остальных.</p>
+            </div>
+          </li>
+          <li>
+            <span class="method__icon"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg></span>
+            <div>
+              <h3>Не перебиваем</h3>
+              <p>Ошибки записываем, пока вы говорите. Разбор приходит в чат после урока.</p>
+            </div>
+          </li>
+          <li>
+            <span class="method__icon"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg></span>
+            <div>
+              <h3>Домашка на 15 минут</h3>
+              <p>Голосовые сообщения вместо упражнений на бумаге. Преподаватель отвечает каждому.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Тест уровня -->
+    <section class="section section--tint" id="test" aria-labelledby="test-title">
+      <div class="container test">
+        <header class="test__head">
+          <h2 class="section-title" id="test-title">Какой у вас уровень?</h2>
+          <p class="section-lead">Пять вопросов, около двух минут. По результату подберём группу.</p>
+        </header>
+
+        <div class="quiz" id="quiz">
+          <div class="quiz__top">
+            <p class="quiz__count" id="quiz-count">Вопрос 1 из 5</p>
+            <div class="progress" role="progressbar" aria-labelledby="quiz-count" aria-valuemin="0" aria-valuemax="5" aria-valuenow="1" id="quiz-progress">
+              <span class="progress__bar"></span>
+            </div>
+          </div>
+
+          <form class="quiz__form" id="quiz-form">
+            <fieldset class="quiz__question">
+              <legend class="quiz__legend" id="quiz-legend"></legend>
+              <div class="quiz__options" id="quiz-options"></div>
+            </fieldset>
+            <div class="quiz__nav">
+              <button class="btn btn--ghost" type="button" id="quiz-back" disabled>Назад</button>
+              <button class="btn btn--primary" type="submit" id="quiz-next" disabled>
+                <span class="btn__label">Дальше</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+              </button>
+            </div>
+          </form>
+
+          <div class="quiz__result" id="quiz-result" hidden tabindex="-1">
+            <p class="quiz__result-label">Ваш уровень примерно</p>
+            <p class="quiz__level" id="quiz-level">B1</p>
+            <p class="quiz__level-name" id="quiz-level-name">Intermediate</p>
+            <p class="quiz__advice" id="quiz-advice"></p>
+            <div class="quiz__nav">
+              <button class="btn btn--ghost" type="button" id="quiz-restart">
+                <svg class="icon" aria-hidden="true"><use href="#i-rotate"/></svg>
+                Пройти заново
+              </button>
+              <a class="btn btn--primary" href="#trial" id="quiz-cta">Записаться в группу</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Форматы: бенто -->
+    <section class="section" id="formats" aria-labelledby="formats-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title" id="formats-title">Выберите, как удобно заниматься</h2>
+        </header>
+
+        <div class="bento">
+          <article class="card card--lead">
+            <img src="img/group-table.jpg" width="960" height="640" alt="Студенты занимаются за общим столом с тетрадями" loading="lazy" />
+            <div class="card__body">
+              <p class="tag">Популярный формат</p>
+              <h3 class="card__title">Мини-группа</h3>
+              <p>2 урока в неделю по 60 минут в Zoom. До 4 человек одного уровня, постоянный преподаватель.</p>
+            </div>
+          </article>
+
+          <article class="card card--club">
+            <div class="card__body">
+              <h3 class="card__title">Разговорный клуб</h3>
+              <p>Каждую пятницу в 19:00. Одна тема, носитель языка в роли ведущего, без оценок и домашки.</p>
+              <ul class="club-topics" aria-label="Темы ближайших встреч">
+                <li>Would you live abroad?</li>
+                <li>Worst job interview ever</li>
+                <li>AI at work</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card card--side">
+            <img src="img/headphones.jpg" width="960" height="640" alt="Наушники, блокнот и чашка чая на столе" loading="lazy" />
+            <div class="card__body">
+              <h3 class="card__title">Индивидуально</h3>
+              <p>Своё расписание и программа под задачу: переезд, собеседование, экзамен.</p>
+            </div>
+          </article>
+
+          <article class="card card--wide">
+            <img src="img/airport.jpg" width="960" height="654" alt="Пассажиры идут по стеклянному переходу в аэропорту" loading="lazy" />
+            <div class="card__body">
+              <h3 class="card__title">Английский для путешествий</h3>
+              <p>Интенсив перед отпуском или переездом. Отрабатываем ситуации, в которых обычно теряются слова.</p>
+              <dl class="card__facts">
+                <div><dt>длительность</dt><dd>6 недель</dd></div>
+                <div><dt>уроков</dt><dd>12</dd></div>
+                <div><dt>ситуаций</dt><dd>8</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Цены -->
+    <section class="section section--tint" id="prices" aria-labelledby="prices-title">
+      <div class="container">
+        <header class="section-head section-head--row">
+          <h2 class="section-title" id="prices-title">Цены без скрытых платежей</h2>
+          <div class="billing" role="radiogroup" aria-label="Период оплаты">
+            <label><input type="radio" name="billing" value="1" checked /><span>Помесячно</span></label>
+            <label><input type="radio" name="billing" value="3" /><span>За 3 месяца <b>−15%</b></span></label>
+          </div>
+        </header>
+
+        <div class="plans">
+          <article class="plan">
+            <h3 class="plan__name">Разговорный клуб</h3>
+            <p class="plan__desc">Для тех, кто уже говорит и хочет практики</p>
+            <p class="plan__price"><span data-price="2900">2 900</span> ₽ <small>в месяц</small></p>
+            <p class="plan__save" aria-live="polite"></p>
+            <ul class="plan__list">
+              <li><svg class="icon icon--sm" aria-hidden="true"><use href="#i-check"/></svg>4 встречи по 60 минут</li>
+              <li><svg class="icon icon--sm" aria-hidden="true"><use href="#i-check"/></svg>Группа до 8 человек</li>
+              <li><svg class="icon icon--sm" aria-hidden="true"><use href="#i-check"/></svg>Записи встреч</li>
+            </ul>
+            <a class="btn btn--secondary btn--block" href="#trial" data-plan="Разговорный клуб">Выбрать клуб</a>
+          </article>
+
+          <article class="plan plan--lead">
+            <p class="plan__badge">Выбирают 7 из 10 студентов</p>
+            <h3 class="plan__name">Мини-группа</h3>
+            <p class="plan__desc">Системный курс с разговорной практикой</p>
+            <p class="plan__price"><span data-price="8900">8 900</span> ₽ <small>в месяц</small></p>
+            <p class="plan__save" aria-live="polite"></p>
+            <ul class="plan__list">
+              <li><svg class="icon icon--sm" aria-hidden="true"><use href="#i-check"/></svg>8 уроков по 60 минут</li>
+              <li><svg class="icon icon--sm" aria-hidden="true"><use href="#i-check"/></svg>До 4 человек одного уровня</li>
+              <li><svg class="icon icon--sm" aria-hidden="true"><use href="#i-check"/></svg>Разговорный клуб в подарок</li>
+              <li><svg class="icon icon--sm" aria-hidden="true"><use href="#i-check"/></svg>Разбор ошибок после каждого урока</li>
+            </ul>
+            <a class="btn btn--primary btn--block" href="#trial" data-plan="Мини-группа">Начать с пробного урока</a>
+          </article>
+
+          <article class="plan">
+            <h3 class="plan__name">Индивидуально</h3>
+            <p class="plan__desc">Под конкретную задачу и ваш график</p>
+            <p class="plan__price"><span data-price="15600">15 600</span> ₽ <small>в месяц</small></p>
+            <p class="plan__save" aria-live="polite"></p>
+            <ul class="plan__list">
+              <li><svg class="icon icon--sm" aria-hidden="true"><use href="#i-check"/></svg>8 уроков по 60 минут</li>
+              <li><svg class="icon icon--sm" aria-hidden="true"><use href="#i-check"/></svg>Программа под вашу цель</li>
+              <li><svg class="icon icon--sm" aria-hidden="true"><use href="#i-check"/></svg>Перенос урока за 3 часа</li>
+            </ul>
+            <a class="btn btn--secondary btn--block" href="#trial" data-plan="Индивидуально">Выбрать индивидуально</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="section" id="reviews" aria-labelledby="reviews-title">
+      <div class="container reviews">
+        <h2 class="section-title" id="reviews-title">Что говорят те, кто уже говорит</h2>
+
+        <figure class="review review--lead">
+          <blockquote>
+            <p>Три года учила английский по учебникам и молчала на созвонах. Через четыре месяца в группе впервые сама провела демо для клиента из Техаса.</p>
+          </blockquote>
+          <figcaption>
+            <span class="avatar">АК</span>
+            <span><strong>Анна</strong><br />продакт-менеджер, B1 → B2</span>
+          </figcaption>
+        </figure>
+
+        <figure class="review">
+          <blockquote>
+            <p>Нравится, что ошибки не исправляют на полуслове. Договорил, а потом разбор в чате.</p>
+          </blockquote>
+          <figcaption>
+            <span class="avatar avatar--alt">ИС</span>
+            <span><strong>Игорь</strong><br />инженер, A2 → B1</span>
+          </figcaption>
+        </figure>
+
+        <figure class="review">
+          <blockquote>
+            <p>Разговорный клуб по пятницам стал моим любимым вечером недели.</p>
+          </blockquote>
+          <figcaption>
+            <span class="avatar avatar--alt">МВ</span>
+            <span><strong>Марина</strong><br />дизайнер, B2</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Пробный урок -->
+    <section class="section section--cta" id="trial" aria-labelledby="trial-title">
+      <div class="container">
+        <div class="trial">
+          <div class="trial__copy">
+            <h2 class="trial__title" id="trial-title">Первый урок бесплатно</h2>
+            <p>45 минут с преподавателем: определим уровень, поговорим о ваших целях и попробуем формат. Без обязательств.</p>
+            <img class="trial__img" src="img/reading-park.webp" width="1024" height="683" alt="Девушка читает книгу на траве в парке" loading="lazy" />
+          </div>
+
+          <form class="form" id="trial-form" novalidate>
+            <div class="input-field">
+              <label for="name">Имя</label>
+              <input id="name" name="name" type="text" autocomplete="given-name" required aria-describedby="name-error" />
+              <p class="input-field__error" id="name-error" hidden>
+                <svg class="icon icon--sm" aria-hidden="true"><use href="#i-alert"/></svg>
+                <span>Напишите, как к вам обращаться.</span>
+              </p>
+            </div>
+            <div class="input-field">
+              <label for="contact">Телефон или Telegram</label>
+              <input id="contact" name="contact" type="text" autocomplete="tel" placeholder="+7 900 000-00-00 или @username" required aria-describedby="contact-error" />
+              <p class="input-field__error" id="contact-error" hidden>
+                <svg class="icon icon--sm" aria-hidden="true"><use href="#i-alert"/></svg>
+                <span>Укажите телефон из 11 цифр или ник в Telegram, начиная с @.</span>
+              </p>
+            </div>
+
+            <fieldset class="input-field">
+              <legend>Когда удобно заниматься</legend>
+              <div class="chips">
+                <label><input type="checkbox" name="time" value="Утро" /><span>Утром</span></label>
+                <label><input type="checkbox" name="time" value="День" /><span>Днём</span></label>
+                <label><input type="checkbox" name="time" value="Вечер" checked /><span>Вечером</span></label>
+                <label><input type="checkbox" name="time" value="Выходные" /><span>В выходные</span></label>
+              </div>
+            </fieldset>
+
+            <p class="form__summary" id="form-summary" hidden></p>
+
+            <button class="btn btn--primary btn--block" type="submit" id="trial-submit">
+              <span class="btn__label">Записаться на пробный урок</span>
+              <svg class="icon spinner" aria-hidden="true" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-6.22-8.56"/></svg>
+            </button>
+            <p class="form__note">Ответим в течение часа. Никакого спама, только про урок.</p>
+
+            <div class="form__success" id="trial-success" hidden tabindex="-1">
+              <svg class="icon icon--xl" aria-hidden="true"><use href="#i-circle-check"/></svg>
+              <p class="form__success-title">See you soon!</p>
+              <p>Заявка принята. Куратор напишет в течение часа и предложит время пробного урока.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a class="logo" href="#top" aria-label="Talkative, наверх">
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9"/><path d="M9 10h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-7l-5 4v-4H9a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2z"/></svg>
+        <span>talkative</span>
+      </a>
+      <nav class="footer__links" aria-label="Ссылки в подвале">
+        <a href="#method">Как учим</a>
+        <a href="#prices">Цены</a>
+        <a href="#trial">Пробный урок</a>
+      </nav>
+      <p class="footer__note">Концепт-лендинг для портфолио. Школа, цены и отзывы вымышлены, фото с лицензией CC0.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

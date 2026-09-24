@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Меню траттории «Нонна Роза»: паста, пицца, десерты</title>
+  <meta name="description" content="Меню семейной траттории: антипасти, домашняя паста, пицца из дровяной печи, горячее, десерты и вино. Поиск по составу, отметки и аллергены.">
+  <meta name="theme-color" content="#f6eee2" media="(prefers-color-scheme: light)"> <!-- ds-allow-hardcode: цвет панели браузера -->
+  <meta name="theme-color" content="#1c1511" media="(prefers-color-scheme: dark)"> <!-- ds-allow-hardcode: цвет панели браузера -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Golos+Text:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <script src="js/icons.js"></script>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html">
+        <span class="logo__name">Нонна Роза</span>
+        <span class="logo__sub">траттория с 1978</span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Главная</a></li>
+          <li><a class="nav__link" href="menu.html" aria-current="page">Меню</a></li>
+          <li><a class="nav__link" href="booking.html">Бронь</a></li>
+          <li><a class="nav__link" href="about.html">О нас и контакты</a></li>
+        </ul>
+      </nav>
+      <p class="status header-status" data-status><span class="status__dot" aria-hidden="true"></span><span><span class="status__word">Ежедневно</span> <span class="status__rest">с 12:00</span></span></p>
+      <a class="btn btn--primary header-cta" href="booking.html">Забронировать стол</a>
+      <button class="burger" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Навигация по сайту">
+        <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"></use></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#i-x"></use></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Навигация на телефоне" hidden>
+      <div class="container">
+        <ul class="mobile-nav__list">
+          <li><a class="mobile-nav__link" href="index.html">Главная</a></li>
+          <li><a class="mobile-nav__link" href="menu.html" aria-current="page">Меню</a></li>
+          <li><a class="mobile-nav__link" href="booking.html">Бронь стола</a></li>
+          <li><a class="mobile-nav__link" href="about.html">О нас и контакты</a></li>
+        </ul>
+        <div class="mobile-nav__foot">
+          <p class="status" data-status><span class="status__dot" aria-hidden="true"></span><span><span class="status__word">Ежедневно</span> <span class="status__rest">с 12:00</span></span></p>
+          <a class="btn btn--primary btn--lg" href="booking.html">Забронировать стол</a>
+          <a class="btn btn--secondary btn--lg" href="tel:+74955550178"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>+7 (495) 555-01-78</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-head" aria-labelledby="menu-title">
+      <div class="container page-head__grid">
+        <div>
+          <p class="eyebrow">La carta, осень</p>
+          <h1 class="page-title" id="menu-title">Меню <em>траттории</em></h1>
+          <p class="lead">Паста раскатывается утром, пицца печётся при вас. Порции щедрые: закуску удобно взять одну на двоих.</p>
+          <p class="print-only muted">Кривоколенный пер., 9, стр. 2. Телефон +7 (495) 555-01-78. Цены в рублях, выход в граммах и миллилитрах.</p>
+          <div class="page-head__aside">
+            <button class="btn btn--secondary" type="button" id="print-menu"><svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg>Печать меню</button>
+            <a class="btn btn--primary" href="booking.html">Забронировать стол</a>
+          </div>
+        </div>
+        <figure class="head-figure">
+          <img class="photo" src="img/tomatoes.jpg" width="960" height="643" alt="Ветка спелых томатов на деревянной доске" fetchpriority="high">
+          <figcaption class="caption">Томаты для соуса берём у одного фермера под Калугой.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="subnav">
+      <div class="container subnav__wrap">
+        <nav aria-label="Разделы меню">
+          <ul class="subnav__list" id="subnav"></ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="menu-tools" role="search" aria-label="Поиск и фильтры по меню">
+        <div class="field">
+          <label class="label" for="menu-search">Поиск по названию и составу</label>
+          <div class="search">
+            <svg class="icon search__icon" aria-hidden="true"><use href="#i-search"></use></svg>
+            <input class="input search__input" type="search" id="menu-search" placeholder="Например: грибы, моцарелла, карбонара" autocomplete="off" aria-describedby="results">
+            <button class="search__clear" type="button" id="search-clear" aria-label="Очистить поиск" hidden><svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg></button>
+          </div>
+        </div>
+        <div class="menu-tools__row">
+          <ul class="chips" aria-label="Фильтры по отметкам">
+            <li><button class="chip" type="button" aria-pressed="false" data-filter="veg"><svg class="icon icon--sm chip__icon" aria-hidden="true"><use href="#i-leaf"></use></svg><svg class="icon icon--sm chip__check" aria-hidden="true"><use href="#i-check"></use></svg>Вегетарианское</button></li>
+            <li><button class="chip" type="button" aria-pressed="false" data-filter="spicy"><svg class="icon icon--sm chip__icon" aria-hidden="true"><use href="#i-flame"></use></svg><svg class="icon icon--sm chip__check" aria-hidden="true"><use href="#i-check"></use></svg>Острое</button></li>
+            <li><button class="chip" type="button" aria-pressed="false" data-filter="gf"><svg class="icon icon--sm chip__icon" aria-hidden="true"><use href="#i-wheat-off"></use></svg><svg class="icon icon--sm chip__check" aria-hidden="true"><use href="#i-check"></use></svg>Без глютена</button></li>
+            <li><button class="chip" type="button" aria-pressed="false" data-filter="hit"><svg class="icon icon--sm chip__icon" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon icon--sm chip__check" aria-hidden="true"><use href="#i-check"></use></svg>Хит</button></li>
+          </ul>
+          <button class="link-btn" type="button" id="reset-all" hidden><svg class="icon icon--sm" aria-hidden="true"><use href="#i-rotate"></use></svg>Сбросить поиск и фильтры</button>
+        </div>
+        <p class="results-line" id="results" role="status" aria-live="polite"></p>
+      </div>
+
+      <div id="menu-sections">
+        <noscript><p class="lead">Для просмотра меню включите JavaScript или позвоните нам: +7 (495) 555-01-78.</p></noscript>
+      </div>
+
+      <div class="empty" id="menu-empty" hidden>
+        <svg class="icon icon--xl" aria-hidden="true"><use href="#i-search-x"></use></svg>
+        <h2 class="empty__title">Такого блюда пока нет</h2>
+        <p id="empty-text">Попробуйте другое слово или снимите часть фильтров. Ищем по названию и составу.</p>
+        <div class="empty__actions">
+          <button class="btn btn--primary" type="button" id="empty-reset">Сбросить поиск и фильтры</button>
+          <button class="btn btn--secondary" type="button" data-suggest="моцарелла">Искать «моцарелла»</button>
+          <button class="btn btn--secondary" type="button" data-suggest="грибы">Искать «грибы»</button>
+        </div>
+      </div>
+
+      <aside class="menu-end" aria-labelledby="menu-end-title">
+        <div>
+          <h2 id="menu-end-title">Аллергия или особое меню?</h2>
+          <p class="muted prose">Скажите официанту: пасту без глютена и соусы без молока готовим по запросу. Для компании от 9 человек соберём банкетный сет.</p>
+        </div>
+        <a class="btn btn--primary btn--lg" href="booking.html">Забронировать стол</a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">Нонна Роза</p>
+          <p class="muted prose">Семейная траттория. Паста, пицца из дровяной печи и вино из маленьких хозяйств Италии.</p>
+        </div>
+        <div class="footer__col">
+          <h2>Страницы</h2>
+          <ul class="footer__list">
+            <li><a href="menu.html">Меню</a></li>
+            <li><a href="booking.html">Бронь стола</a></li>
+            <li><a href="about.html">О нас и контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h2>Адрес</h2>
+          <p>Кривоколенный пер., 9, стр. 2</p>
+          <p class="muted">м. Чистые пруды, Тургеневская</p>
+        </div>
+        <div class="footer__col">
+          <h2>Связь</h2>
+          <ul class="footer__list">
+            <li><a href="tel:+74955550178"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-phone"></use></svg>+7 (495) 555-01-78</a></li>
+            <li><a href="mailto:stol@nonna-rosa.example"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-mail"></use></svg>stol@nonna-rosa.example</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>Концепт для портфолио. Компания, цены и данные вымышлены, фото с лицензией CC0.</p>
+        <p>© <span data-year>2026</span> Траттория «Нонна Роза»</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/menu-data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

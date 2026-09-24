@@ -1,0 +1,25 @@
+{
+  "name": "Копилка: личный бюджет",
+  "short_name": "Копилка",
+  "description": "Трекер личного бюджета: траты, доходы и лимиты по категориям. Работает офлайн, данные хранятся на устройстве.",
+  "lang": "ru",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "id": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#135c49",
+  "background_color": "#f7f4ee",
+  "categories": ["finance", "productivity"],
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Операции", "short_name": "Операции", "url": "./#/ops" },
+    { "name": "Бюджеты", "short_name": "Бюджеты", "url": "./#/budgets" }
+  ]
+}

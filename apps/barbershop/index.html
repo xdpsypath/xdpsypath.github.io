@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сталь. Онлайн-запись в барбершоп</title>
+  <meta name="description" content="Онлайн-запись в барбершоп «Сталь» в Москве: услуги, мастера, свободное время за 30 секунд. Концепт для портфолио.">
+  <meta name="theme-color" content="#f7f2e8" media="(prefers-color-scheme: light)"><!-- ds-allow-hardcode: meta theme-color не читает CSS-переменные -->
+  <meta name="theme-color" content="#12110e" media="(prefers-color-scheme: dark)"><!-- ds-allow-hardcode: meta theme-color не читает CSS-переменные -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f4d3a'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' text-anchor='middle' fill='%23f7f2e8'%3EС%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- Иконки lucide (ISC), inline-спрайт -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></symbol>
+    <symbol id="i-calendar-plus" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><path d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8"/><path d="M3 10h18"/><path d="M16 19h6"/><path d="M19 16v6"/></symbol>
+    <symbol id="i-calendar-check" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></symbol>
+    <symbol id="i-calendar-x" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m14 14-4 4"/><path d="m10 14 4 4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></symbol>
+    <symbol id="i-user-check" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></symbol>
+    <symbol id="i-user-x" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m17 8 5 5"/><path d="m22 8-5 5"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+    <symbol id="i-rotate-ccw" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-log-in" viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></symbol>
+    <symbol id="i-log-out" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+    <symbol id="i-columns" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-move-h" viewBox="0 0 24 24"><path d="m18 8 4 4-4 4"/><path d="m6 8-4 4 4 4"/><path d="M2 12h20"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M3 12h.01"/><path d="M3 18h.01"/><path d="M3 6h.01"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M8 6h13"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+  </svg>
+
+  <!-- Клиентский режим -->
+  <div class="shell shell--client" id="client-shell">
+    <header class="site-header">
+      <div class="site-header__inner container">
+        <a class="brand" href="#/" aria-label="Сталь, барбершоп. На главную записи">
+          <span class="brand__mark" aria-hidden="true">С</span>
+          <span class="brand__text">
+            <span class="brand__name">Сталь</span>
+            <span class="brand__kind">барбершоп</span>
+          </span>
+        </a>
+        <ul class="site-header__meta" aria-label="Адрес и часы работы">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg><span>Хохловский пер., 7</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>Ежедневно <span class="num">10:00-21:00</span></span></li>
+        </ul>
+        <a class="btn btn--ghost btn--sm header-mine" href="#/my" id="mine-link">
+          <svg class="icon" aria-hidden="true"><use href="#i-list"/></svg>
+          <span>Мои записи</span>
+          <span class="count-badge" id="mine-count" hidden></span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main" class="client-main" tabindex="-1"></main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <p class="site-footer__name">Сталь</p>
+          <p class="site-footer__tag">Стрижки и бритьё без спешки. Четыре мастера, одно кресло на каждого.</p>
+        </div>
+        <dl class="site-footer__facts">
+          <div><dt>Адрес</dt><dd>Москва, Хохловский пер., 7, стр. 2<br>м. Китай-город, 6 минут пешком</dd></div>
+          <div><dt>Часы</dt><dd>Ежедневно, <span class="num">10:00-21:00</span></dd></div>
+          <div><dt>Телефон</dt><dd><a class="link" href="tel:+74950004717">+7 (495) 000-47-17</a></dd></div>
+        </dl>
+        <div class="site-footer__bottom">
+          <p>Концепт для портфолио. Компания, мастера, цены и данные вымышлены, фотографии не используются.</p>
+          <a class="link link--quiet" href="#/admin"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Вход для администратора</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Режим администратора -->
+  <div class="shell shell--admin" id="admin-shell" hidden>
+    <header class="admin-header">
+      <div class="admin-header__inner">
+        <a class="brand brand--compact" href="#/admin" aria-label="Сталь, панель администратора">
+          <span class="brand__mark" aria-hidden="true">С</span>
+          <span class="brand__text">
+            <span class="brand__name">Сталь</span>
+            <span class="brand__kind">администратор</span>
+          </span>
+        </a>
+        <nav class="admin-nav" aria-label="Разделы панели" id="admin-nav" hidden>
+          <a class="admin-nav__link" href="#/admin/day" data-tab="day"><svg class="icon" aria-hidden="true"><use href="#i-columns"/></svg>День</a>
+          <a class="admin-nav__link" href="#/admin/week" data-tab="week"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg>Неделя</a>
+        </nav>
+        <div class="admin-header__actions" id="admin-actions" hidden>
+          <button class="btn btn--danger-ghost btn--sm" type="button" id="reset-demo">
+            <svg class="icon" aria-hidden="true"><use href="#i-rotate-ccw"/></svg><span>Сбросить демо-данные</span>
+          </button>
+          <button class="btn btn--secondary btn--sm" type="button" id="admin-logout">
+            <svg class="icon" aria-hidden="true"><use href="#i-log-out"/></svg><span>Выйти</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="admin-main" class="admin-main" tabindex="-1"></main>
+    <footer class="admin-footer">
+      <p>Демо-режим. Данные хранятся только в этом браузере. Концепт для портфолио, компания вымышлена.</p>
+      <a class="link link--quiet" href="#/">Клиентская запись</a>
+    </footer>
+  </div>
+
+  <!-- Боковая панель записи (админ) -->
+  <dialog class="drawer" id="drawer" aria-labelledby="drawer-title">
+    <div class="drawer__panel">
+      <div class="drawer__head">
+        <h2 class="drawer__title" id="drawer-title">Запись</h2>
+        <button class="icon-btn" type="button" data-close aria-label="Закрыть панель">
+          <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>
+        </button>
+      </div>
+      <div class="drawer__body" id="drawer-body"></div>
+    </div>
+  </dialog>
+
+  <!-- Подтверждение деструктивных действий -->
+  <dialog class="modal" id="confirm" aria-labelledby="confirm-title" aria-describedby="confirm-text">
+    <form method="dialog" class="modal__inner">
+      <span class="modal__icon" aria-hidden="true"><svg class="icon icon--lg"><use href="#i-alert"/></svg></span>
+      <h2 class="modal__title" id="confirm-title">Отменить запись?</h2>
+      <p class="modal__text" id="confirm-text"></p>
+      <div class="modal__actions">
+        <button class="btn btn--secondary" value="cancel" type="submit" id="confirm-no">Не отменять</button>
+        <button class="btn btn--danger" value="ok" type="submit" id="confirm-yes">Отменить запись</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast-region" id="toasts" role="status" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/client.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

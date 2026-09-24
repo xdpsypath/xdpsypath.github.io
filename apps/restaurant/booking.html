@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Бронь стола в траттории «Нонна Роза»</title>
+  <meta name="description" content="Забронируйте стол онлайн: выберите день, время, зал, веранду или место у дровяной печи. Подтвердим звонком.">
+  <meta name="theme-color" content="#f6eee2" media="(prefers-color-scheme: light)"> <!-- ds-allow-hardcode: цвет панели браузера -->
+  <meta name="theme-color" content="#1c1511" media="(prefers-color-scheme: dark)"> <!-- ds-allow-hardcode: цвет панели браузера -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Golos+Text:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <script src="js/icons.js"></script>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html">
+        <span class="logo__name">Нонна Роза</span>
+        <span class="logo__sub">траттория с 1978</span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Главная</a></li>
+          <li><a class="nav__link" href="menu.html">Меню</a></li>
+          <li><a class="nav__link" href="booking.html" aria-current="page">Бронь</a></li>
+          <li><a class="nav__link" href="about.html">О нас и контакты</a></li>
+        </ul>
+      </nav>
+      <p class="status header-status" data-status><span class="status__dot" aria-hidden="true"></span><span><span class="status__word">Ежедневно</span> <span class="status__rest">с 12:00</span></span></p>
+      <a class="btn btn--primary header-cta" href="booking.html">Забронировать стол</a>
+      <button class="burger" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Навигация по сайту">
+        <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"></use></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#i-x"></use></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Навигация на телефоне" hidden>
+      <div class="container">
+        <ul class="mobile-nav__list">
+          <li><a class="mobile-nav__link" href="index.html">Главная</a></li>
+          <li><a class="mobile-nav__link" href="menu.html">Меню</a></li>
+          <li><a class="mobile-nav__link" href="booking.html" aria-current="page">Бронь стола</a></li>
+          <li><a class="mobile-nav__link" href="about.html">О нас и контакты</a></li>
+        </ul>
+        <div class="mobile-nav__foot">
+          <p class="status" data-status><span class="status__dot" aria-hidden="true"></span><span><span class="status__word">Ежедневно</span> <span class="status__rest">с 12:00</span></span></p>
+          <a class="btn btn--primary btn--lg" href="booking.html">Забронировать стол</a>
+          <a class="btn btn--secondary btn--lg" href="tel:+74955550178"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>+7 (495) 555-01-78</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-head" aria-labelledby="booking-title">
+      <div class="container page-head__grid">
+        <div>
+          <p class="eyebrow">Бронь стола</p>
+          <h1 class="page-title" id="booking-title">Стол <em>на вечер</em></h1>
+          <p class="lead">Выберите день, место и время. В часы работы перезвоним за 15 минут и подтвердим бронь.</p>
+        </div>
+        <figure class="head-figure">
+          <img class="photo" src="img/wine.webp" width="1024" height="1024" alt="Бокал красного вина на деревянном столе веранды, вечерние огни на заднем плане" fetchpriority="high">
+          <figcaption class="caption">Веранда открыта с мая по сентябрь, с пледами и гирляндами.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="container">
+      <form class="booking" id="booking-form" novalidate aria-labelledby="booking-title">
+        <div class="booking__grid">
+          <div class="booking__steps">
+            <fieldset class="step">
+              <legend class="step__legend"><span class="step__num">1.</span> День</legend>
+              <div class="dates" id="dates"></div>
+              <p class="dates__legend"><span id="today-label"></span><span><span class="date__flag" aria-hidden="true"></span>понедельник: бронь с 16:00, до этого санитарный день</span></p>
+              <p class="step__note step__note--info" id="date-note" hidden><svg class="icon icon--sm" aria-hidden="true"><use href="#i-info"></use></svg><span>По понедельникам до 16:00 санитарный день. Бронь на этот день с 16:00.</span></p>
+            </fieldset>
+
+            <fieldset class="step">
+              <legend class="step__legend"><span class="step__num">2.</span> Гости</legend>
+              <div class="guests">
+                <div class="stepper">
+                  <button class="stepper__btn" type="button" id="guests-minus" aria-label="Меньше гостей" aria-controls="guests"><svg class="icon" aria-hidden="true"><use href="#i-minus"></use></svg></button>
+                  <input class="stepper__input" type="number" id="guests" name="guests" min="1" max="12" value="2" inputmode="numeric" aria-label="Количество гостей, от 1 до 12">
+                  <button class="stepper__btn" type="button" id="guests-plus" aria-label="Больше гостей" aria-controls="guests"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></button>
+                </div>
+                <span class="guests__word" id="guests-word" aria-hidden="true">гостя</span>
+              </div>
+              <p class="step__note step__note--info" id="banquet-note" role="status" hidden><svg class="icon icon--sm" aria-hidden="true"><use href="#i-info"></use></svg><span>Для компании от 9 человек с вами свяжется банкетный менеджер: обсудит меню, рассадку и предзаказ.</span></p>
+            </fieldset>
+
+            <fieldset class="step">
+              <legend class="step__legend"><span class="step__num">3.</span> Место</legend>
+              <div class="zones" id="zones"></div>
+            </fieldset>
+
+            <fieldset class="step" aria-describedby="time-error">
+              <legend class="step__legend"><span class="step__num">4.</span> Время</legend>
+              <div id="slots"></div>
+              <p class="error" id="time-error" hidden><svg class="icon icon--sm" aria-hidden="true"><use href="#i-alert"></use></svg><span>Выберите время: нажмите на свободный слот.</span></p>
+            </fieldset>
+
+            <fieldset class="step">
+              <legend class="step__legend"><span class="step__num">5.</span> Повод</legend>
+              <div class="occasions" id="occasions"></div>
+            </fieldset>
+
+            <fieldset class="step">
+              <legend class="step__legend"><span class="step__num">6.</span> Контакты</legend>
+              <div class="contact-grid">
+                <div class="field">
+                  <label class="label" for="name">Имя</label>
+                  <input class="input" id="name" name="name" type="text" autocomplete="given-name" required aria-describedby="name-error">
+                  <p class="error" id="name-error" hidden><svg class="icon icon--sm" aria-hidden="true"><use href="#i-alert"></use></svg><span>Напишите имя, хотя бы две буквы. Так к вам обратится администратор.</span></p>
+                </div>
+                <div class="field">
+                  <label class="label" for="phone">Телефон</label>
+                  <input class="input" id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required aria-describedby="phone-hint phone-error">
+                  <p class="hint" id="phone-hint">Позвоним, чтобы подтвердить бронь</p>
+                  <p class="error" id="phone-error" hidden><svg class="icon icon--sm" aria-hidden="true"><use href="#i-alert"></use></svg><span>Нужно 10 цифр после +7, например +7 (916) 123-45-67.</span></p>
+                </div>
+                <div class="field field--wide">
+                  <label class="label" for="wishes">Пожелания <span class="muted">(необязательно)</span></label>
+                  <textarea class="textarea" id="wishes" name="wishes" rows="3" maxlength="500" placeholder="Детский стул, торт к десерту, аллергия на орехи"></textarea>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="summary-wrap">
+            <aside class="summary" aria-labelledby="summary-title">
+              <h2 class="summary__title" id="summary-title">Ваша бронь</h2>
+              <ul class="summary__list">
+                <li class="summary__row"><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg><div><span class="summary__k">День</span><span class="summary__v is-empty" id="sum-date">не выбран</span></div></li>
+                <li class="summary__row"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg><div><span class="summary__k">Время</span><span class="summary__v is-empty" id="sum-time">не выбрано</span></div></li>
+                <li class="summary__row"><svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg><div><span class="summary__k">Гости</span><span class="summary__v" id="sum-guests">2 гостя</span></div></li>
+                <li class="summary__row"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg><div><span class="summary__k">Место</span><span class="summary__v" id="sum-zone">Зал</span></div></li>
+                <li class="summary__row"><svg class="icon" aria-hidden="true"><use href="#i-wine"></use></svg><div><span class="summary__k">Повод</span><span class="summary__v" id="sum-occasion">Без повода</span></div></li>
+              </ul>
+              <div class="form-alert" id="form-alert" role="alert" hidden><svg class="icon icon--sm" aria-hidden="true"><use href="#i-alert"></use></svg><span id="form-alert-text"></span></div>
+              <button class="btn btn--primary btn--lg btn--block" type="submit" id="submit"><span class="btn__label">Подтвердить бронь</span></button>
+              <p class="summary__note">Бронь держим 15 минут. Нажимая кнопку, вы соглашаетесь на звонок для подтверждения.</p>
+            </aside>
+          </div>
+        </div>
+      </form>
+
+      <section class="success" id="success" tabindex="-1" aria-labelledby="success-title" hidden>
+        <svg class="icon icon--xl" aria-hidden="true"><use href="#i-circle-check"></use></svg>
+        <h2 class="success__title" id="success-title">Стол ждёт вас</h2>
+        <p class="success__details" id="success-details"></p>
+        <p class="muted">Если планы изменятся, отмените бронь ниже или позвоните: <a href="tel:+74955550178">+7 (495) 555-01-78</a>.</p>
+        <p class="success__demo" id="success-demo" hidden>Это демо-сайт, бронь сохранена только в вашем браузере.</p>
+        <div class="success__actions">
+          <button class="btn btn--secondary" type="button" id="book-again">Забронировать ещё один стол</button>
+          <a class="btn btn--primary" href="menu.html">Посмотреть меню</a>
+        </div>
+      </section>
+
+      <section class="my-bookings" aria-labelledby="my-title">
+        <div class="my-bookings__head">
+          <h2 id="my-title" tabindex="-1">Ваши брони</h2>
+          <p class="muted">Хранятся в этом браузере</p>
+        </div>
+        <ul class="bookings" id="bookings"></ul>
+        <div class="bookings-empty" id="bookings-empty">
+          <svg class="icon icon--lg" aria-hidden="true"><use href="#i-calendar-check"></use></svg>
+          <p>Пока пусто. После подтверждения бронь появится здесь, и её можно будет отменить в один клик.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <dialog class="dialog" id="cancel-dialog" aria-labelledby="cancel-title" aria-describedby="cancel-text">
+    <h2 class="dialog__title" id="cancel-title">Отменить бронь?</h2>
+    <p class="dialog__text" id="cancel-text">Стол освободится для других гостей. Вернуть бронь не получится, придётся оформить новую.</p>
+    <div class="dialog__actions">
+      <button class="btn btn--secondary" type="button" id="cancel-keep">Оставить бронь</button>
+      <button class="btn btn--danger" type="button" id="cancel-confirm"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-trash"></use></svg>Отменить бронь</button>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">Нонна Роза</p>
+          <p class="muted prose">Семейная траттория. Паста, пицца из дровяной печи и вино из маленьких хозяйств Италии.</p>
+        </div>
+        <div class="footer__col">
+          <h2>Страницы</h2>
+          <ul class="footer__list">
+            <li><a href="menu.html">Меню</a></li>
+            <li><a href="booking.html">Бронь стола</a></li>
+            <li><a href="about.html">О нас и контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h2>Адрес</h2>
+          <p>Кривоколенный пер., 9, стр. 2</p>
+          <p class="muted">м. Чистые пруды, Тургеневская</p>
+        </div>
+        <div class="footer__col">
+          <h2>Связь</h2>
+          <ul class="footer__list">
+            <li><a href="tel:+74955550178"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-phone"></use></svg>+7 (495) 555-01-78</a></li>
+            <li><a href="mailto:stol@nonna-rosa.example"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-mail"></use></svg>stol@nonna-rosa.example</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>Концепт для портфолио. Компания, цены и данные вымышлены, фото с лицензией CC0.</p>
+        <p>© <span data-year>2026</span> Траттория «Нонна Роза»</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>
